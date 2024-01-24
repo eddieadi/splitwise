@@ -87,8 +87,8 @@ Clone the repository to your local machine:
 
 bash
 Copy code
-git clone https://github.com/your-username/Splitwise-Flask-App.git
-cd Splitwise-Flask-App
+git clone https://github.com/eddieadi/splitwise.git
+cd splitwise
 Create a virtual environment and activate it:
 
 bash
@@ -101,21 +101,21 @@ bash
 Copy code
 pip install -r requirements.txt
 Running the Application
-Before running the application, ensure that your MySQL server is running, and update the database configuration in app/config/__init__.py with your MySQL credentials:
+Before running the application, ensure that your MySQL server is running, and update the database configuration in app.py with your MySQL credentials:
 
 python
 Copy code
-# app/config/__init__.py
+# app.py
 
-MYSQL_HOST = '127.0.0.1'
-MYSQL_USER = 'your_username'
-MYSQL_PASSWORD = 'your_password'
-MYSQL_DB = 'splitwise'
+app.config['MYSQL_HOST'] = '127.0.0.1'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'root'
+app.config['MYSQL_DB'] = 'splitwise'
 Now, run the Flask application:
 
 bash
 Copy code
-python run.py
+python app.py
 The application will be accessible at http://localhost:5000.
 
 API Endpoints
