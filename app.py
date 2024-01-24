@@ -14,16 +14,6 @@ mysql = MySQL(app)
 def hello_world():
 	return 'Hello World'
 
-@app.route('/api/save_data', methods=['POST'])
-def save_data():
-    data = request.get_json()
-    cur = mysql.connection.cursor()
-    query = "INSERT INTO splitwise (name, age) VALUES (%s, %s)"
-    cur.execute(query, (data['name'], data['age']))
-    mysql.connection.commit()
-    cur.close()
-    return jsonify({'message': 'Data saved successfully'}), 201
-
 @app.route('/api/create_user', methods=['POST'])
 def create_user():
     try:
