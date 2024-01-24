@@ -84,37 +84,26 @@ CREATE TABLE UserExpenseType (
 
 Installation
 Clone the repository to your local machine:
-
-bash
-Copy code
 git clone https://github.com/eddieadi/splitwise.git
 cd splitwise
-Create a virtual environment and activate it:
 
-bash
-Copy code
+Create a virtual environment and activate it:
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+
 Install the required dependencies:
-
-bash
-Copy code
 pip install -r requirements.txt
+
 Running the Application
+
 Before running the application, ensure that your MySQL server is running, and update the database configuration in app.py with your MySQL credentials:
-
-python
-Copy code
-# app.py
-
 app.config['MYSQL_HOST'] = '127.0.0.1'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'root'
 app.config['MYSQL_DB'] = 'splitwise'
-Now, run the Flask application:
 
-bash
-Copy code
+
+Now, run the Flask application:
 python app.py
 The application will be accessible at http://localhost:5000.
 
